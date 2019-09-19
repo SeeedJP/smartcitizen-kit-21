@@ -863,7 +863,7 @@ bool SckESP::loadConfig()
 void SckESP::ledSet(uint8_t value)
 {
 	blink.detach();
-	if (value) analogWrite(pinLED, 820);
+	if (value) digitalWrite(pinLED, LOW);
 	else digitalWrite(pinLED, HIGH);
 }
 void SckESP::ledBlink(float rate)
@@ -874,7 +874,7 @@ void SckESP::_ledToggle()
 {
 	ledValue = abs(ledValue - 1);
 	/* digitalWrite(pinLED, ledValue); */
-	if (ledValue) analogWrite(pinLED, 820);
+	if (ledValue) digitalWrite(pinLED, LOW);
 	else digitalWrite(pinLED, HIGH);
 }
 
