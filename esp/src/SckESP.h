@@ -66,7 +66,7 @@ class SckESP
 		bool mqttCustom();
 
 		// Led control
-		const uint8_t pinLED = 4; 	// GPIO5
+		const uint8_t pinLED = 5; 	// GPIO5
 		uint8_t ledValue = 0;
 		Ticker blink;
 		uint16_t LED_SLOW = 350;
