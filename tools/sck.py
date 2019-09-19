@@ -227,7 +227,7 @@ class sck:
         os.chdir('esp')
         piorun = subprocess.call(['pio', 'run'], stdout=out, stderr=subprocess.STDOUT)
         if piorun == 0:
-            shutil.copyfile(os.path.join(os.getcwd() , '.pioenvs', 'esp12e', 'firmware.bin'), os.path.join(self.paths['binFolder'], self.files['espBin']))
+            shutil.copyfile(os.path.join(os.getcwd() , '.pioenvs', 'esp_wroom_02', 'firmware.bin'), os.path.join(self.paths['binFolder'], self.files['espBin']))
             return True
         self.err_out('Failed building ESP firmware')
         return False
